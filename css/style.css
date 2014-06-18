@@ -1,0 +1,12 @@
+
+body {
+    margin: 0;
+}
+
+.page {
+    margin: 6em auto;
+    width: 800px;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: Georgia, serif;
+}
