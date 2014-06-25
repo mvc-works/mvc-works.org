@@ -16,6 +16,9 @@ html
     script (:defer) (:src build/main.js)
 
   body
+    #logo
+      img
+        :src png/mvc.png
     .page
       = "MVC.im shares a vision that MVC frameworks would one day "
       = "turn into design tools, that makes building apps a lot easier. "
