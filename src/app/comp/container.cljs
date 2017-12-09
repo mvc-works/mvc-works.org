@@ -2,27 +2,68 @@
 (ns app.comp.container
   (:require [hsl.core :refer [hsl]]
             [respo-ui.style :as ui]
-            [respo.macros :refer [defcomp cursor-> <> div button textarea span]]
+            [respo.macros :refer [defcomp cursor-> list-> <> div button textarea span a]]
             [verbosely.core :refer [verbosely!]]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]))
+
+(def projects
+  [{:name "Respo",
+    :url "https://github.com/Respo/respo",
+    :desc "virtual DOM library built with ClojureScript"}
+   {:name "Keycode",
+    :url "https://github.com/mvc-works/keycode.cljc",
+    :desc "keycode library for ClojureScript apps."}
+   {:name "coworkflow",
+    :url "https://github.com/mvc-works/coworkflow",
+    :desc "App template based on ClojureScript, Respo, Cirru Editor... with support of hot code swapping."}
+   {:name "shell-page",
+    :url "https://github.com/mvc-works/shell-page",
+    :desc "small library to generate index.html with configurations."}
+   {:name "verbosely",
+    :url "https://github.com/mvc-works/verbosely",
+    :desc "a macro for printing values of functions"}
+   {:name "webpack-hud",
+    :url "https://github.com/mvc-works/webpack-hud",
+    :desc "devtool to show webpack messages inside running webpage"}])
 
 (defcomp
  comp-container
  (reel)
  (let [store (:store reel), states (:states store)]
    (div
-    {:style (merge ui/global ui/row)}
-    (textarea
-     {:value (:content store),
-      :placeholder "Content",
-      :style (merge ui/textarea {:width 640, :height 320}),
-      :on {:input (fn [e d! m!] (d! :content (:value e)))}})
-    (=< "8px" nil)
+    {:style (merge ui/global)}
+    (cursor-> :reel comp-reel states reel {})
     (div
-     {}
-     (button
-      {:style ui/button,
-       :inner-text (str "run"),
-       :on {:click (fn [e d! m!] (println (:content store)))}}))
-    (cursor-> :reel comp-reel states reel {}))))
+     {:style (merge
+              ui/center
+              {:height 400, :background-color (hsl 200 80 50), :color :white})}
+     (span
+      {:style {:font-size 64, :font-family "Josefin Sans, sans-serif", :font-weight 100}}
+      (<> "MVC Works")))
+    (div
+     {:style {:padding 40, :font-size 16, :font-family "Hind, Arial,serif-sans"}}
+     (div
+      {:style {:padding-bottom 40}}
+      (<>
+       "MVC is a insightful pattern for creating apps. In this organisation I'm exploring various of pieces trying to utilise the power of MVC pattern, and build tools and examples around MVC."))
+     (list->
+      :div
+      {}
+      (->> projects
+           (map-indexed
+            (fn [idx project]
+              [(div
+                {:style (merge
+                         ui/row
+                         {:background-color (hsl 180 50 96),
+                          :margin-bottom 24,
+                          :padding "8px 16px"})}
+                (div
+                 {:style {:width 160, :font-size 18}}
+                 (a {:href (:url project), :target "_blank"} (<> (:name project))))
+                (div {:style {:color (hsl 0 0 50)}} (<> (:desc project))))])))))
+    (div
+     {:style {:padding "16px 40px"}}
+     (<> "Find mvc-works on ")
+     (a {:href "https://github.com/mvc-works/"} (<> "GitHub."))))))
