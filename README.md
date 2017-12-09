@@ -1,7 +1,9 @@
 
-MVC.im
+MVC Works
 ------
 
-http://mvc.im/
+Page http://mvc-works.org/
 
-Just a site that wants to push MVC and design forward.
+### License
+
+MIT
