@@ -1,9 +1,9 @@
 
 (ns app.comp.container
   (:require [hsl.core :refer [hsl]]
-            [respo-ui.style :as ui]
+            [respo-ui.core :as ui]
             [respo.macros :refer [defcomp cursor-> list-> <> div button textarea span a]]
-            [verbosely.core :refer [verbosely!]]
+            [verbosely.core :refer [verbosely! log!]]
             [respo.comp.space :refer [=<]]
             [reel.comp.reel :refer [comp-reel]]))
 
@@ -14,8 +14,8 @@
    {:name "Keycode",
     :url "https://github.com/mvc-works/keycode.cljc",
     :desc "keycode library for ClojureScript apps."}
-   {:name "coworkflow",
-    :url "https://github.com/mvc-works/coworkflow",
+   {:name "Calcit Workflow",
+    :url "https://github.com/mvc-works/calcit-workflow",
     :desc "App template based on ClojureScript, Respo, Cirru Editor... with support of hot code swapping."}
    {:name "shell-page",
     :url "https://github.com/mvc-works/shell-page",
@@ -25,7 +25,10 @@
     :desc "a macro for printing values of functions"}
    {:name "webpack-hud",
     :url "https://github.com/mvc-works/webpack-hud",
-    :desc "devtool to show webpack messages inside running webpage"}])
+    :desc "devtool to show webpack messages inside running webpage"}
+   {:name "Termina",
+    :url "https://github.com/mvc-works/termina",
+    :desc "A toy process management tool."}])
 
 (defcomp
  comp-container
@@ -53,7 +56,8 @@
       (->> projects
            (map-indexed
             (fn [idx project]
-              [(div
+              [idx
+               (div
                 {:style (merge
                          ui/row
                          {:background-color (hsl 180 50 96),
