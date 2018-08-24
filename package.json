@@ -1,13 +1,17 @@
 {
-  "name": "mvc-works.org",
+  "name": "calcit-workflow",
   "version": "0.1.0",
-  "description": "Home site for MVC Works",
+  "description": "ClojureScript workflow using Calcit Editor",
   "main": "index.js",
   "scripts": {
-    "watch": "shadow-cljs watch browser",
+    "watch": "shadow-cljs watch client",
     "serve": "http-server dist -s",
     "repl": "rlwrap shadow-cljs clj-repl",
-    "build": "shadow-cljs clj-run build.main/build"
+    "build": "shadow-cljs clj-run build.main/build",
+    "build-local": "shadow-cljs clj-run build.main/build-local",
+    "page": "shadow-cljs clj-run build.main/page",
+    "upload": "lumo -c cli/:src/ -m build.upload",
+    "ln": "cd target && rm -f entry && ln -s ../entry"
   },
   "repository": {
     "type": "git",
@@ -16,10 +20,10 @@
   "author": "jiyinyiyong",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.10.0",
-    "shadow-cljs": "^2.1.26"
+    "http-server": "^0.11.1",
+    "shadow-cljs": "^2.6.2"
   },
   "dependencies": {
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.13"
   }
 }

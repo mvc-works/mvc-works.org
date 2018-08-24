@@ -17,6 +17,9 @@
    {:name "Calcit Workflow",
     :url "https://github.com/mvc-works/calcit-workflow",
     :desc "App template based on ClojureScript, Respo, Cirru Editor... with support of hot code swapping."}
+   {:name "File Sucker",
+    :url "https://github.com/mvc-works/file-sucker",
+    :desc "A simple tool for grabbing files from phone to laptop."}
    {:name "shell-page",
     :url "https://github.com/mvc-works/shell-page",
     :desc "small library to generate index.html with configurations."}
