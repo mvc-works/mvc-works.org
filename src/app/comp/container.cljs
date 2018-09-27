@@ -11,9 +11,6 @@
   [{:name "Respo",
     :url "https://github.com/Respo/respo",
     :desc "virtual DOM library built with ClojureScript"}
-   {:name "Keycode",
-    :url "https://github.com/mvc-works/keycode.cljc",
-    :desc "keycode library for ClojureScript apps."}
    {:name "Calcit Workflow",
     :url "https://github.com/mvc-works/calcit-workflow",
     :desc "App template based on ClojureScript, Respo, Cirru Editor... with support of hot code swapping."}
@@ -31,7 +28,10 @@
     :desc "devtool to show webpack messages inside running webpage"}
    {:name "Termina",
     :url "https://github.com/mvc-works/termina",
-    :desc "A toy process management tool."}])
+    :desc "A toy process management tool."}
+   {:name "Fuzzy Filter",
+    :url "https://github.com/mvc-works/fuzzy-filter",
+    :desc "fuzzy filtering library"}])
 
 (defcomp
  comp-container
