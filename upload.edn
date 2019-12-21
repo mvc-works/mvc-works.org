@@ -1,0 +1,6 @@
+
+{:host "mvc-works.org"
+ :uploads [{:from "dist/*"
+            :to "cdn/mvc-works.org/"}
+           {:from "dist/{index.html,manifest.json}"
+            :to "repo/mvc-works/mvc-works.org/"}]}
