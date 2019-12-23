@@ -419,21 +419,6 @@
                         :data $ {}
                           |T $ {} (:type :leaf) (:author |root) (:time 1512749235282) (:text |:desc) (:id |HJv2dEO-Gleaf)
                           |j $ {} (:type :leaf) (:author |root) (:time 1512833684908) (:text "||virtual DOM library built with ClojureScript") (:id |Skh2uNdbG)
-                  |x $ {} (:type :expr) (:author |root) (:time 1512749204187) (:id |Hkx2zfKKbf)
-                    :data $ {}
-                      |T $ {} (:type :leaf) (:author |root) (:time 1512749204838) (:text |{}) (:id |rJ3c_4_Zf)
-                      |j $ {} (:type :expr) (:author |root) (:time 1512749205151) (:id |BJz6qONO-M)
-                        :data $ {}
-                          |T $ {} (:type :leaf) (:author |root) (:time 1512749208576) (:text |:name) (:id |HkZp5uNObM)
-                          |j $ {} (:type :leaf) (:author |root) (:time 1512833562613) (:text ||verbosely) (:id |H1g-suEd-f)
-                      |r $ {} (:type :expr) (:author |root) (:time 1512749217303) (:id |S1eYjdNdWf)
-                        :data $ {}
-                          |T $ {} (:type :leaf) (:author |root) (:time 1512749218696) (:text |:url) (:id |S1eYjdNdWfleaf)
-                          |j $ {} (:type :leaf) (:author |root) (:time 1512833558752) (:text ||https://github.com/mvc-works/verbosely) (:id |BJWoiO4dZG)
-                      |v $ {} (:type :expr) (:author |root) (:time 1512749230824) (:id |HJv2dEO-G)
-                        :data $ {}
-                          |T $ {} (:type :leaf) (:author |root) (:time 1512749235282) (:text |:desc) (:id |HJv2dEO-Gleaf)
-                          |j $ {} (:type :leaf) (:author |root) (:time 1512833576386) (:text "||a macro for printing values of functions") (:id |Skh2uNdbG)
                   |v $ {} (:type :expr) (:author |root) (:time 1512749204187) (:id |ryn0-KYZz)
                     :data $ {}
                       |T $ {} (:type :leaf) (:author |root) (:time 1512749204838) (:text |{}) (:id |rJ3c_4_Zf)
