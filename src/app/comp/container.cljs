@@ -19,9 +19,6 @@
    {:name "shell-page",
     :url "https://github.com/mvc-works/shell-page",
     :desc "small library to generate index.html with configurations."}
-   {:name "verbosely",
-    :url "https://github.com/mvc-works/verbosely",
-    :desc "a macro for printing values of functions"}
    {:name "webpack-hud",
     :url "https://github.com/mvc-works/webpack-hud",
     :desc "devtool to show webpack messages inside running webpage"}
