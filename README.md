@@ -30,7 +30,7 @@ npm packages
 
 ### Develop
 
-https://github.com/mvc-works/calcit-workflow
+https://github.com/calcit-lang/respo-calcit-workflow
 
 ### License
 
