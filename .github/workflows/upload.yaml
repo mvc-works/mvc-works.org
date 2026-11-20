@@ -22,7 +22,7 @@ jobs:
           node-version: 22
       - uses: calcit-lang/setup-calcit@v1.5.1
         with:
-          version: "0.43.0"
+          version: "0.44.0"
           tools: calcit,caps
       - name: Install dependencies
         run: |
