@@ -22,7 +22,7 @@ jobs:
           node-version: 22
       - uses: calcit-lang/setup-calcit@v1.5.1
         with:
-          version: "0.44.0"
+          version: "0.45.1"
           tools: calcit,caps
       - name: Install dependencies
         run: |
@@ -30,6 +30,7 @@ jobs:
           corepack enable
           yarn install --immutable
           caps --ci
+          caps verify --toolchain
       - name: Validate Calcit
         run: |
           set -euo pipefail
